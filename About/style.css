@@ -1,0 +1,497 @@
+
+
+.container{
+    max-width: calc(100% - var(--spacing))!important;
+    margin: 0 auto;
+}
+@media(max-width:576px){
+    :root{
+        --spacing:0;
+    }
+}
+/*================
+Start Fonts 
+===============*/
+
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url(../main/fonts/Montserrat-Regular.otf);
+
+}@font-face {
+    font-family: 'montserrat-Medium';
+    src: url(../main/fonts/Montserrat-Medium.otf);
+}
+
+@font-face {
+    font-family: 'montserrat-light';
+    src: url(../main/fonts/Montserrat-Light.otf);
+}
+
+@font-face {
+    font-family: 'montserrat-Extralight';
+    src: url(../main/fonts/Montserrat-UltraLight.otf);
+}
+
+    /*============
+    End Fonts
+===============*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: rgb(87, 87 , 86);
+
+}
+:root{
+    --main-color:#ba9764;
+    --spacing: 21vw;
+    font-family: 'montserrat-Medium';
+}
+
+a{
+    text-decoration: none!important;
+    color: rgb(87, 87 , 86);
+}
+ul{
+    list-style: none;
+}
+
+
+
+
+/*==============
+    ============
+    Start banner
+    ============
+===============*/
+
+.banner{
+    background: url(../main/images/about-banner.jpg) center / cover;
+    width: 100%;
+    height: 50em;
+}
+.banner .overlay-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: hsl(36deg 93% 10% / 59%);
+    font-weight: 800;
+}
+.banner .overlay-text h3{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-family:'montserrat-light' ;
+    font-weight: 100;
+    padding: 0 calc(25vw);
+    font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+@media(max-width:762px){
+    .banner .overlay-text h3{
+        padding: 2em;
+    }
+}
+/* Start text */
+header{
+    background-color: #eee;
+}
+
+header .text{
+    text-align: center;
+    padding: 1vw;
+}
+header .text h2{
+    color: var(--main-color);
+}
+header .text p{
+    font-size: calc(.7em + .5vw);
+    padding: 0 calc(1em + 9vw);
+    margin-top: 30px;
+}
+
+header .text a{
+    font-size: 1em;
+    font-family: 'montserrat-Medium';
+    position: relative;
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+header .text a::after{
+    content: '';
+    position: absolute;
+    right: -1.4em;
+    top: calc(50% - 0.25em);
+    width: 0.7em;
+    height: 0.7em;
+    transform: rotateZ(45deg);
+    border: 1px solid #000;
+    border-bottom: 0;
+    border-left: 0;
+}
+header .text a:hover,
+header .text a:hover::after{
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/*==============
+    ============
+    End banner
+    ============
+===============*/
+
+/*==================
+    ================
+    Start Our values
+    ===============
+==================*/
+
+.our-values{
+    padding: 10vh 0;
+}
+.our-values .text{
+    width: 100%;
+}
+.our-values .text h2{
+    color: var(--main-color);
+    margin-bottom: 1vw;
+}
+.our-values .text p{
+    text-align: center;
+    padding: 0 calc(2em + 3vw);
+    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1900 - 300)));
+    margin-bottom: 2vw;
+}
+/* Article */
+.our-values article{
+    display: grid;
+    grid-template-areas:'image'
+                        'image'
+                        'image'
+                        'title'
+                        'text'
+                        'text';
+    grid-template-rows: 40% 20% 40%;
+    margin-top: 50px;
+    row-gap: 2%;
+}
+.our-values article .image-container {
+    width: 100%;
+    /* background-color: #bbb; */
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    grid-area: 'image';
+    margin-bottom: 15px;
+
+}
+.our-values article img{
+    width: 50%;
+    height: 100%;
+}
+.our-values article h3{
+    color: var(--main-color);
+    width: 50%;
+    font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1900 - 300)));
+    font-family: 'montserrat-light';
+    /* margin: 20px 0; */
+    font-weight: 700;
+    grid-area: 'title';
+}
+.our-values article p{
+    font-weight: 600;
+    grid-area: 'text';
+    font-family: 'montserrat-Extralight';
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+
+}
+
+
+/*==============
+    ============
+    End Our values
+    ============
+===============*/
+
+
+/*==============
+    ============
+    Start banner2
+    ============
+===============*/
+
+#banner2{
+    padding: 4vw 0;
+    background: url(../main/images/darkweb-background.png) center /cover;
+    background-size: 1500px;
+}
+#banner2 h3{
+    color: var(--main-color);
+    font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1900 - 300)));
+    margin-bottom: 50px;
+}
+#banner2 p{
+    color: #fff;
+    padding-right: 4vw;
+    font-size: 1em;
+}
+#banner2 .link {
+    font-size: 1em;
+    font-family: 'montserrat-Medium';
+    position: relative;
+    cursor: pointer;
+    color: #ba9764;
+    font-size: 1.2em;
+    margin-top: 150px;
+}
+#banner2 .link::after{
+    content: '';
+    position: absolute;
+    right: -1em;
+    top: calc(50% - 0.25em);
+    width: 0.7em;
+    height: 0.7em;
+    transform: rotateZ(45deg);
+    border: 3px solid var(--main-color);
+    border-bottom: 0;
+    border-left: 0;
+}
+#banner2 .link:hover{
+    color: var(--main-color);
+}
+/*==============
+    ============
+    End banner2
+    ============
+===============*/
+
+/*==============
+    ============
+    Start our clients
+    ============
+===============*/
+
+
+.our-clients{
+    padding: 4vw 0;
+}
+.our-clients .text{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3vw;
+}
+
+.our-clients .text .link{ margin-top: 0; }
+
+.our-clients .text h3{
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-bottom: 1vw;
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1900 - 300)));
+
+}
+.our-clients .text p{
+    text-align: center;
+    padding: 0 calc(2em + 9vw);
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1900 - 300)));
+    margin-bottom: 2vw;
+}
+.our-clients .link {
+    font-size: 1em;
+    font-family: 'montserrat-Medium';
+    position: relative;
+    cursor: pointer;
+    color: #ba9764;
+    font-size: 1.2em;
+    margin-top: 150px;
+}
+.our-clients .link::after{
+    content: '';
+    position: absolute;
+    right: -1em;
+    top: calc(50% - 0.25em);
+    width: 0.7em;
+    height: 0.7em;
+    transform: rotateZ(45deg);
+    border: 3px solid var(--main-color);
+    border-bottom: 0;
+    border-left: 0;
+}
+.our-clients .link:hover{
+    color: var(--main-color);
+}
+
+/* Clients logos */
+
+.our-clients article img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: filter .5s ease;
+}
+.our-clients article img:hover{
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+/*==============
+    ============
+    End our clients
+    ============
+===============*/
+
+/*==============
+    ============
+    Start our People
+    ============
+===============*/
+
+
+.our-people{
+    padding: 4vw 0;
+    background-color: #f9f7f3;
+}
+.our-people .text{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3vw;
+}
+
+.our-people .text .link{ margin-top: 0; }
+
+.our-people .text h3{
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-bottom: 1vw;
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1900 - 300)));
+
+}
+.our-people .text p{
+    text-align: center;
+    padding: 0 calc(2em + 11vw);
+    font-size: calc(10px + (20 - 10) * ((100vw - 300px) / (1900 - 300)));
+    margin-bottom: 2vw;
+}
+
+.our-people article{
+    margin-bottom: 30px;
+    overflow: hidden;
+    opacity: 0;
+
+}
+@keyframes fade-in{
+    100%{
+        opacity: 1;
+    }    
+}
+.our-people article img{
+    position: relative;
+    transition: transform .2s ease;
+    max-width: calc(100%);
+    
+}
+.our-people article img:hover{
+    transform: perspective(800px) scale(1.1);
+}
+.our-people article .info{
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    background-color: #12121298;
+    color: #fff;
+    width:calc(100% - 35px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+/*==============
+    ============
+    End our People
+    ============
+===============*/
+
+/*==============
+    ============
+    Start careers
+    ============
+===============*/
+.careers{
+    padding: 4vw 0;
+    background-size: 1500px;
+}
+.careers h3{
+    color: var(--main-color);
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1900 - 300)));
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.careers h2{
+    font-size: calc(22px + (46 - 22) * ((100vw - 300px) / (1900 - 300)));
+
+}
+.careers p{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 4vw;
+    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1900 - 300)));
+
+}
+.careers .link {
+    font-size: 1em;
+    font-family: 'montserrat-light';
+    position: relative;
+    cursor: pointer;
+    color: #121212;
+    font-size: 1.2em;
+    margin-top: 150px;
+    font-weight: 100;
+}
+.careers .link::after{
+    content: '';
+    position: absolute;
+    right: -1em;
+    top: calc(50% - 0.25em);
+    width: 0.7em;
+    height: 0.7em;
+    transform: rotateZ(45deg);
+    border: 3px solid #121212;
+    border-bottom: 0;
+    border-left: 0;
+}
+.careers .link:hover{
+    color: var(--main-color);
+}
+.careers .link:hover::after{
+    border-color: var(--main-color);
+}
+
+.careers .heart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:4vw ;
+}
+.careers .heart img{
+    width: 65%;
+}
+
+/*==============
+    ============
+    End careers
+    ============
+===============*/
+

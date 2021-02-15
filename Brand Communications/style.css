@@ -1,0 +1,423 @@
+
+.container{
+    max-width: calc(100% - var(--spacing))!important;
+    margin: 0 auto;
+}
+@media(max-width:576px){
+    :root{
+        --spacing:0;
+    }
+}
+/*================
+Start Fonts 
+===============*/
+
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url(../main/fonts/Montserrat-Regular.otf);
+
+}@font-face {
+    font-family: 'montserrat-Medium';
+    src: url(../main/fonts/Montserrat-Medium.otf);
+}
+
+@font-face {
+    font-family: 'montserrat-light';
+    src: url(../main/fonts/Montserrat-Light.otf);
+}
+
+@font-face {
+    font-family: 'montserrat-Extralight';
+    src: url(../main/fonts/Montserrat-UltraLight.otf);
+}
+
+    /*============
+    End Fonts
+===============*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: rgb(87, 87 , 86);
+
+}
+:root{
+    --main-color:#ba9764;
+    --spacing: 21vw;
+    font-family: 'montserrat-Medium';
+}
+
+a{
+    text-decoration: none!important;
+    color: rgb(87, 87 , 86);
+}
+ul{
+    list-style: none;
+}
+
+
+/*==============
+    ============
+    Start banner
+    ============
+===============*/
+
+.banner{
+    background: url(../main/images/brand_comms-banner.jpg) center / cover;
+    width: 100%;
+    height: calc(20em + 50vh);
+}
+.banner .overlay-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: hsl(36deg 46% 16% / 49%);
+    font-weight: 800;
+}
+.banner .overlay-text h3{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-family:'montserrat-light' ;
+    font-weight: 100;
+    padding: 0 calc(25vw);
+    font-size: calc(16px + (28 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+@media(max-width:762px){
+    .banner .overlay-text h3{
+        padding: 2em;
+    }
+}
+/* Start text */
+
+header .text{
+    text-align: center;
+    padding: 2vw calc(2em + 10vw);
+}
+
+header .text h2{
+    font-family: 'montserrat-light';
+    font-weight: 100;
+    font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1900 - 300)));
+}
+
+header .text .icons{
+    font-family: 'montserrat-medium';
+}
+header .text .icons div{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+header .text .icons img{
+    width: 70%;
+    margin-bottom: 20px;
+}
+header .text .icons h4{
+    font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1900 - 300)));
+}
+@media(max-width:576px){
+    header .text{
+        padding: 2em calc(1em + 3vw);
+    }
+}
+/*==============
+    ============
+    End banner
+    ============
+===============*/
+
+/*==============
+    ============
+    Start main section
+    ============
+===============*/
+
+.main-section{
+    border-top: 1px solid #121212;
+    border-bottom: 1px solid #121212;
+}
+
+.main-section article{
+    display: flex;
+    font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1900 - 300)));
+    padding: 0;
+    margin: 0;
+}
+
+.main-section .text{
+    padding-left: calc(var(--spacing) / 2 + 2vw) ;
+    padding-top: calc(1.5em + 2vw) ;
+}
+.main-section .text h3{
+    font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1900 - 300)));
+    margin-bottom: 3vh;
+}
+.main-section .text h2{
+    font-size: calc(14px + (40 - 14) * ((100vw - 300px) / (1900 - 300)));
+}
+.main-section .text p{
+    margin: 3vh 0;
+    font-family: 'montserrat-light';
+    font-size: .42em;
+    word-spacing: 2px;
+    font-weight: 500;
+}
+
+.main-section .lists{
+    display: flex;
+    
+}
+.main-section .text ul{
+    flex-basis: 50%;
+    list-style: disc;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+.main-section .text h4{
+    flex-basis: 100%;
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+    font-weight: 700;
+}
+.main-section .text li{
+    font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1900 - 300)));
+    flex-basis: 100%;
+    margin-left: 40px;
+    font-family: 'montserrat-light';
+
+}
+
+
+.main-section .image-container{
+    display: flex;
+    align-items: center;
+    padding-right: calc(var(--spacing) / 2 + 8vw) ;
+    padding-top: calc(1.5em + 2vw) ;
+    padding-left: 3vw;
+}
+/* Even articles */
+.main-section article:nth-child(even){
+    flex-direction: row-reverse;
+}
+.main-section article:nth-child(even) .text{
+    padding-right: calc(var(--spacing) / 2 + 2vw) ;
+    padding-left: 0;
+}
+.main-section article:nth-child(even) .image-container{
+    padding-right: 4vw ;
+    padding-left: calc(var(--spacing) / 2 + 2vw) ;
+}
+
+
+
+
+/*==============
+    ============
+    End main section
+    ============
+===============*/
+
+/*==============
+    ============
+    Start process section
+    ============
+===============*/
+.process{
+    padding-bottom: 3vw;
+}
+.process div{
+    color: #777;
+    font-family: 'montserrat-light';
+    font-weight: 500;
+    margin-bottom: 5vw;
+}
+
+.process h4{
+    font-family: 'montserrat-Medium';
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+
+}
+.Discovery h4{color: #2A556B;}
+.Exploration h4{color: #92898A;}
+.Conceptualise h4{color: #628196;}
+.Creation h4{color: #BA9764;}
+.Production h4{color: #777;}
+
+.process h6{
+    font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1900 - 300)));
+
+}
+
+.process p{
+    margin-left: 1vw;
+    font-size: calc(10px + (14 - 10) * ((100vw - 300px) / (1900 - 300)));
+}
+@media(max-width:576px){
+    .process div{
+        border-bottom: 1px solid #777;
+    }
+    .process div:nth-of-type(1){
+        border-bottom: 0 solid #777;
+    }
+}
+
+
+/*==============
+    ============
+    End Process section
+    ============
+===============*/
+
+/*==============
+    ============
+    Start our work
+    ============
+===============*/
+
+.our-work{
+    border-top: 3px solid rgb(191, 191, 191);
+
+}
+.our-work img{
+    max-width: 80%;
+    margin: 0;
+}
+.carousel-item{
+    display: flex!important;
+    justify-content: center;
+}
+
+.carousel-control-next span{
+    width: 5vw;
+    height: 5vw;
+    transform: rotateZ(45deg);
+    border: 1vw solid var(--main-color);
+    border-bottom: 0;
+    border-left: 0;
+}
+.carousel-control-prev span{
+    width: 5vw;
+    height: 5vw;
+    transform: rotateZ(45deg);
+    border: 1vw solid var(--main-color);
+    border-top: 0;
+    border-right: 0;
+}
+
+/*==============
+    ============
+    End our work
+    ============
+===============*/
+
+/*==============
+    ============
+    Start contact section
+    ============
+===============*/
+
+
+#contact{
+    background-color: #f5f5f5e6;
+    padding-top: 6em;
+    padding-bottom: 6em;
+}
+#contact .text{
+    padding: 2vw;
+    padding-top: 0;
+}
+#contact .text h3{
+    font-size: calc(1em + 2.2vw);
+    margin-bottom: 1em;
+}
+#contact .text p{
+    font-size: calc(.7em + .5vw);
+
+}
+#contact .text img{
+    width: 150px;
+    /* background-color: tr; */
+}
+
+/* Form */
+.contact-form{
+    padding-right: 4em;
+}
+form h6{
+    font-family: 'montserrat-Extralight';
+    font-weight: 600;
+    font-size: calc(.7em + .5vw);
+}
+form .text-field{
+    width: 100%;
+    height: 2.5em;
+    border: 2px solid #bbb;
+    margin-bottom: 1em;
+
+}
+
+/* Radio buttons */
+.radios h6{
+    flex-basis: 100%;
+    font-size: calc(.6em + .5vw);
+}
+form .radios {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+.radios .radio{
+    flex-basis: 20%;
+}
+
+form .radios .form-check-input {
+    width: calc(1em + 0.47vw);
+    height: calc(1em + 0.47vw);
+    flex: 0 0 30px;
+}
+.form-check{
+    display: flex;
+    justify-content: flex-start;
+}
+.form-check .form-check-label{
+    flex:5 0 60%;
+    font-size: calc(.5em + .5vw);
+    font-family: 'montserrat-light';
+    line-height: 1.2;
+}
+
+/*Submit button*/
+#submit{
+    max-height: calc(1.5em + 1.2vw);
+    outline: none;
+    border: 0;
+    background-color: #ddd;
+    color: #777;
+    font-family: 'montserrat-light';
+    font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1900 - 300)));
+    padding: 0vw 2.8vw;
+    margin-left: 3vw;
+    transition: background-color .8s ease, color .8s ease
+}
+#submit:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+
+/*==============
+    ============
+    End contact section
+    ============
+===============*/
+
