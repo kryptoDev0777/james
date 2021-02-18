@@ -636,3 +636,18 @@ footer .copy{
     End Footer 
     ============
 ===============*/
+
+
+@media (max-width:590px){
+    .main-section .features .features-container{
+        flex-wrap: wrap;
+    }
+    .main-section .features .features-container div{
+        flex: 1 0 25%;
+    }
+
+}
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}

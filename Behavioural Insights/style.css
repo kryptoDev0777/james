@@ -443,6 +443,8 @@ header .text a:hover::after{
 }
 .section1 article ul h4{
     text-decoration: underline;
+    font-size: calc(11px + (19 - 11) * ((100vw - 300px) / (1900 - 300)));
+
 }
 .section1 article li{
     margin-left: 30px;
@@ -471,7 +473,7 @@ header .text a:hover::after{
 section.quotes{
     display: flex;
     justify-content: center;
-    padding: 3em calc(1em + 20vw) ;
+    padding: 3em calc(1em + 24vw);
     flex-wrap: wrap;
     background-color: #121212c8;
     background-image: url(../main/images/darkweb-background.png);
@@ -482,23 +484,26 @@ section.quotes{
     font-size: calc(0.7em + 1vw);
 }
 .quote p{
-    color: rgb(255, 255, 255);
+    color: rgb(216, 214, 214);
     line-height: 1.3;
     margin-top:2em;
+    font-size: calc(11px + (31 - 11) * ((100vw - 300px) / (1900 - 300)));
+    font-weight: 100;
 }
 .quote .saying{
     color: rgb(228, 226, 226);
+    font-size: 1.7rem;
 }
 .quote .saying span{
     color: var(--main-color);
-    font-size: .9em;
+    font-size: .7em;
     font-family: 'montserrat-Medium';
 }
 .quote .saying i{
     color: rgb(210, 210, 210);
     font-family: 'montserrat-Extralight';
     font-weight: 100;
-    font-size: 0.8em;
+    font-size: 0.75em;
 }
 .quotes .pagination{
     display: flex;
@@ -585,7 +590,10 @@ form .radios {
 .radios .radio{
     flex-basis: 20%;
 }
+.radios .radio label{
+    font-size: .88em;
 
+}
 form .radios .form-check-input {
     width: calc(1em + 0.47vw);
     height: calc(1em + 0.47vw);
@@ -625,121 +633,4 @@ form .radios .form-check-input {
     End contact section
     ============
 ===============*/
-
-/*==============
-    ============
-    Start Footer 
-    ============
-===============*/
-
-footer{
-    background: url('../main/images/darkweb-background.png');
-    color: #fff;
-    padding: calc(1em + 4vw) 0;
-}
-footer  h6{
-    font-size: calc(6px + 1.3vw);
-    text-transform: uppercase;
-    color: var(--main-color);
-    padding-bottom: .5em;
-}
-footer ul li{
-    font-family: 'montserrat-Extralight';
-    font-size: 1em;
-    max-width: 250px;
-    font-weight: 600;
-    line-height: 1.8;
-}
-footer ul p{
-    margin-top: 50px;
-    word-break: break-word;
-}
-footer .connect {
-    display: flex;
-    align-content: space-between;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-footer .connect .sign-up{
-    min-width: calc(.9em + 7vw);
-    min-height: calc(0.5em + 1.2vw);
-    outline: none;
-    border: 0;
-    background-color: #ddd;
-    color: #777;
-    font-family: 'montserrat-light';
-    font-size: 1.em;
-    margin-left: 2vw;
-    padding:.2em;
-}
-
-footer .social-links{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: flex-center;
-}
-footer .social-link{
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    color: #121212;
-    border-radius: 50%;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    cursor: pointer;
-}
-footer .social-link:hover{
-    transition: background-color .5s ease;
-    color: #fff;
-    background-color: var(--main-color);
-}
-footer .certficate{
-    width: calc(1em + 5.2vw);   
-    margin-top: 15px;
-}
-footer .copy{
-    /* float: left; */
-    width: 100%;
-    font-weight: 600;
-    font-size: 1.1em;
-}
-@media(max-width:576px){
-
-    footer h6{
-        font-size:1em;
-    }
-    footer ul li{
-        min-width:100%;
-        max-width:100%;
-        font-size:.7em;
-    }
-    footer .social-link{
-        min-width: 25px;
-        width:30px;
-        height:30px;
-    }
-    footer ul,
-    footer .connect{
-        min-width: 100%!important;
-        max-width: 100%!important;
-    }
-    footer ul p{
-        margin-top: 15px;
-    }
-    footer .certficate{
-        margin-top:0;
-        margin-left:40px
-    }
-    footer .copy{
-        font-size:.8em;
-    }
-}
-/*==============
-    ============
-    End Footer 
-    ============
-===============*/
+/*  */

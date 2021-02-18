@@ -97,10 +97,10 @@ ul{
 .banner button{
     background: transparent;
     border: 1px solid #fff;
-    font-size: 1.1em;
+    font-size: .9em;
     font-family: 'montserrat-light';
     text-transform: uppercase;
-    padding:.5em .5em;
+    padding:.3em .8em;
     color: #fff;
     margin-top: 8.2vh;
     transition: background 0.5s ease;
@@ -209,10 +209,48 @@ ul{
     color: var(--main-color);
     border-color: var(--main-color);
 }
-.section1 article img{
-    filter: brightness(0);
 
+.section1 article img{
+    position: relative;
+    filter: brightness(0);
+    transition: filter .5s ease;
 }
+
+/* Image hover effects */
+
+.section1 .image-container {
+	position: relative;
+}
+.section1 .image-container::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.section1 .image-container:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
 @keyframes rotate-in-2{
     0%{
         /* transform: rotateX(-100deg); */
@@ -391,6 +429,45 @@ section.quotes{
 
 
 
+.section2 .image-container {
+    overflow: hidden;
+	position: relative;
+    width: 100%;
+}
+.section2 .image-container::before {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform:scale(0);
+	transform: scale(0);
+    border-radius: 70%;
+}
+.section2 .image-container:hover::before {
+	-webkit-animation: shine-ver .75s;
+	animation: shine-ver .75s forwards;
+}
+@-webkit-keyframes shine-ver {
+	100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+	}
+}
+@keyframes shine-ver {
+	100% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+	}
+}
+
+
+
 /*==============
     ============
     End Section2
@@ -423,13 +500,11 @@ section.quotes{
 }
 #contact .text img{
     width: 150px;
-    /* background-color: tr; */
+    margin-top: 5vw;
 }
 
 /* Form */
-.contact-form{
-    padding-right: 4em;
-}
+
 form h6{
     font-family: 'montserrat-Extralight';
     font-weight: 600;
@@ -447,6 +522,7 @@ form .text-field{
 .radios h6{
     flex-basis: 100%;
     font-size: calc(.6em + .5vw);
+    margin-bottom: 1em;
 }
 form .radios {
     display: flex;
@@ -457,11 +533,14 @@ form .radios {
 .radios .radio{
     flex-basis: 20%;
 }
-
+.radios .radio label{
+    font-size: .88em;
+}
 form .radios .form-check-input {
     width: calc(1em + 0.47vw);
     height: calc(1em + 0.47vw);
     flex: 0 0 30px;
+    cursor: pointer;
 }
 .form-check{
     display: flex;
@@ -469,7 +548,7 @@ form .radios .form-check-input {
 }
 .form-check .form-check-label{
     flex:5 0 60%;
-    font-size: calc(.5em + .5vw);
+    font-size: calc(.35em + .5vw);
     font-family: 'montserrat-light';
     line-height: 1.2;
 }
@@ -479,11 +558,11 @@ form .radios .form-check-input {
 /*Submit button*/
 #submit{
     /* width: calc(2em + 7vw); */
-    max-height: calc(1.5em + 1.2vw);
+    max-height: calc(1.2em + 1.2vw);
     outline: none;
     border: 0;
     background-color: #ddd;
-    color: #777;
+    color: rgb(104, 104, 104);
     font-family: 'montserrat-light';
     font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1900 - 300)));
     padding: 0vw 2.8vw;

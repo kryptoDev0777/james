@@ -297,18 +297,18 @@ header .text .icons h4{
 }
 
 .carousel-control-next span{
-    width: 5vw;
-    height: 5vw;
+    width: 3vw;
+    height: 3vw;
     transform: rotateZ(45deg);
-    border: 1vw solid var(--main-color);
+    border: .8vw solid var(--main-color);
     border-bottom: 0;
     border-left: 0;
 }
 .carousel-control-prev span{
-    width: 5vw;
-    height: 5vw;
+    width: 3vw;
+    height: 3vw;
     transform: rotateZ(45deg);
-    border: 1vw solid var(--main-color);
+    border: .8vw solid var(--main-color);
     border-top: 0;
     border-right: 0;
 }

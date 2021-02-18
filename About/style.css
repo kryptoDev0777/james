@@ -337,6 +337,7 @@ header .text a:hover::after{
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: filter .5s ease;
+    cursor: pointer;
 }
 .our-clients article img:hover{
     -webkit-filter: grayscale(0%);
@@ -416,7 +417,17 @@ header .text a:hover::after{
     justify-content: center;
     padding-left: 20px;
     padding-bottom: 5px;
+    max-height: 50px;
+    height: 100%;
 }
+.our-people article .info h5{
+    margin: 0;
+}
+.our-people article .info span{
+    font-size: .8em;
+}
+
+
 
 /*==============
     ============
@@ -430,7 +441,7 @@ header .text a:hover::after{
     ============
 ===============*/
 .careers{
-    padding: 4vw 0;
+    padding: 3vw 0;
     background-size: 1500px;
 }
 .careers h3{
@@ -440,14 +451,13 @@ header .text a:hover::after{
     text-transform: uppercase;
 }
 .careers h2{
-    font-size: calc(22px + (46 - 22) * ((100vw - 300px) / (1900 - 300)));
-
+    font-size: calc(22px + (40 - 22) * ((100vw - 300px) / (1900 - 300)));
 }
 .careers p{
     padding-top: 30px;
     padding-bottom: 30px;
     padding-right: 4vw;
-    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (1900 - 300)));
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1900 - 300)));
 
 }
 .careers .link {

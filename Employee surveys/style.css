@@ -253,7 +253,9 @@ header .text .icons h4{
     transform: translateX(100%);
     opacity: 0;
 }
-
+.features{
+    width: 100%;
+}
 @keyframes to-left {
     to{
         transform: translateX(0);
@@ -271,3 +273,17 @@ header .text .icons h4{
     End main section
     ============
 ===============*/
+
+@media (max-width:590px){
+    .main-section .features .features-container{
+        flex-wrap: wrap;
+    }
+    .main-section .features .features-container div{
+        flex: 1 0 25%;
+    }
+
+}
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}

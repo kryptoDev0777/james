@@ -64,6 +64,7 @@ body{
 a{
     text-decoration: none!important;
     color: rgb(87, 87 , 86);
+    cursor: pointer;
 }
 ul{
     list-style: none;
@@ -321,7 +322,8 @@ ul{
 footer{
     background: url('../main/images/darkweb-background.png');
     color: #fff;
-    padding: calc(1em + 4vw) 0;
+    background-size: 6000px;
+    padding: calc(.1em + 2vw) 0;
 }
 footer  h6{
     font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
@@ -335,8 +337,9 @@ footer ul li:nth-of-type(1){
 footer ul li{
     font-family: 'montserrat-Extralight';
     font-size: calc(8px + (18 - 8) * ((100vw - 300px) / (1900 - 300)));
-    max-width: 300px;
+    max-width: 250px;
     line-height: 1.4;
+    margin: .2em 0;
 }
 footer ul p{
     margin-top: 50px;
@@ -362,10 +365,10 @@ footer .connect .sign-up{
 }
 
 footer .social-links{
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    align-items: flex-end;
     flex-wrap: wrap;
-    align-items: flex-center;
 }
 footer .social-link{
     width: 40px;
@@ -373,12 +376,12 @@ footer .social-link{
     background-color: #fff;
     color: #121212;
     border-radius: 50%;
-    font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 20px;
     cursor: pointer;
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
 }
 footer .social-link:hover{
     transition: background-color .5s ease;
@@ -386,14 +389,16 @@ footer .social-link:hover{
     background-color: var(--main-color);
 }
 footer .certficate{
-    width: calc(1em + 5.2vw);   
+    width: calc(1em + 4.2vw);   
     margin-top: 15px;
+    margin-left: 2em;
 }
 footer .copy{
     /* float: left; */
     width: 100%;
     font-weight: 600;
     font-size: 1.1em;
+    padding-left: 15px;
 }
 @media(max-width:576px){
 
