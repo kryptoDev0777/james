@@ -446,13 +446,13 @@ header .text .icons h4{
 }
 
 .main-section article:nth-child(even) .image-container img{/* For the animation */
-    transform: translateX(-100%);
-    opacity: 0;
+    /* transform: translateX(-100%);
+    opacity: 0; */
 }
 
 .main-section article:nth-child(odd) .image-container img{/* For the animation */
-    transform: translateX(100%);
-    opacity: 0;
+    /* transform: translateX(100%);
+    opacity: 0; */
 }
 
 

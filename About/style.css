@@ -388,7 +388,6 @@ header .text a:hover::after{
 .our-people article{
     margin-bottom: 30px;
     overflow: hidden;
-    opacity: 0;
 
 }
 @keyframes fade-in{

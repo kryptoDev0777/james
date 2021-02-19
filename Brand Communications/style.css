@@ -366,9 +366,11 @@ form .text-field{
 }
 
 /* Radio buttons */
+
 .radios h6{
     flex-basis: 100%;
     font-size: calc(.6em + .5vw);
+    margin-bottom: 1em;
 }
 form .radios {
     display: flex;
@@ -379,41 +381,77 @@ form .radios {
 .radios .radio{
     flex-basis: 20%;
 }
-
-form .radios .form-check-input {
+.radios .radio label{
+    font-size: .88em;
+}
+form .radios .custom-control-input {
     width: calc(1em + 0.47vw);
     height: calc(1em + 0.47vw);
     flex: 0 0 30px;
+    cursor: pointer;
 }
-.form-check{
+.custom-checkbox{
     display: flex;
     justify-content: flex-start;
 }
-.form-check .form-check-label{
+.form-check .custom-control-input{
     flex:5 0 60%;
-    font-size: calc(.5em + .5vw);
+    font-size: calc(.35em + .5vw);
     font-family: 'montserrat-light';
     line-height: 1.2;
+}
+/* Cahnging fill color */
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-color: var(--main-color); 
+    border-color:var(--main-color);
+    border-radius: 50%;
+}
+.custom-radio .custom-control-input:active ~ .custom-control-label::before {
+    color: var(--main-color);
+    background-color: var(--main-color); 
+}
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 5px 1px var(--main-color)
+}
+
+/* input feilds outline */
+input.text-field:focus{
+	outline:var(--main-color) 1px solid;
+}
+input:-internal-autofill-selected {
+    background-color: #000000!important;
+    color: #000000!important;
+}
+
+/* check box */
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 5px 1px var(--main-color)
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:var(--main-color);
 }
 
 /*Submit button*/
 #submit{
-    max-height: calc(1.5em + 1.2vw);
+    /* width: calc(2em + 7vw); */
+    max-height: calc(1.2em + 1.2vw);
     outline: none;
     border: 0;
     background-color: #ddd;
-    color: #777;
+    color: rgb(104, 104, 104);
     font-family: 'montserrat-light';
     font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1900 - 300)));
     padding: 0vw 2.8vw;
     margin-left: 3vw;
-    transition: background-color .8s ease, color .8s ease
+    transition: background-color .8s ease,
+                color .8s ease;
 }
 #submit:hover{
     background-color: var(--main-color);
     color: #fff;
 }
-
 
 /*==============
     ============

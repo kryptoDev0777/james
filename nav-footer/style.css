@@ -102,7 +102,8 @@ ul{
     justify-content: space-evenly;
     align-items: center;
     font-family: 'montserrat-light';
-    font-size: 1.2em;
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1900 - 300)));
+
     text-align: left;
     z-index: 5;
     z-index: 5000;
@@ -212,9 +213,11 @@ ul{
     :root{
         --spacing:16vw;
     }
-    
+    #main-list{
+        justify-content: space-between;
+    }
 }
-@media(max-width:1250px){
+@media(max-width:1300px){
     :root{
         --spacing:10vw;
     }
@@ -326,23 +329,28 @@ footer{
     padding: calc(.1em + 2vw) 0;
 }
 footer  h6{
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1900 - 300)));
+    font-size: calc(16px + (21 - 16) * ((100vw - 300px) / (1900 - 300)));
     text-transform: uppercase;
     color: var(--main-color);
     padding-bottom: .5em;
 }
-footer ul li:nth-of-type(1){
-    font-weight: 900;
+footer ul:first-of-type li{
+/*     font-weight: 900; */
+    margin:0;
+    max-width: 275px;
+
 }
 footer ul li{
-    font-family: 'montserrat-Extralight';
+    font-family: 'montserrat-light';
     font-size: calc(8px + (18 - 8) * ((100vw - 300px) / (1900 - 300)));
-    max-width: 250px;
+    max-width: 200px;
     line-height: 1.4;
-    margin: .2em 0;
+    font-weight:400;
+    margin: .4em 0;
 }
 footer ul p{
     margin-top: 50px;
+    font-size: calc(8px + (19 - 8) * ((100vw - 300px) / (1900 - 300)));
     word-break: break-word;
 }
 footer .connect {
@@ -350,6 +358,7 @@ footer .connect {
     align-content: space-between;
     justify-content: flex-start;
     flex-wrap: wrap;
+    font-size: 1.1em;
 }
 footer .connect .sign-up{
     min-width: calc(.9em + 7vw);
@@ -363,16 +372,22 @@ footer .connect .sign-up{
     margin-left: 2vw;
     padding:.2em;
 }
-
 footer .social-links{
-    width: 100%;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+footer .social-links ul{
+    width: 50%;
     display: flex;
     align-items: flex-end;
-    flex-wrap: wrap;
+/*     flex-wrap: wrap; */
+    justify-content:space-between;
+    margin-bottom: 0;
 }
 footer .social-link{
-    width: 40px;
-    height: 40px;
+    /* flex: 0 0 25% ; */
+    padding: .4em .6em;
     background-color: #fff;
     color: #121212;
     border-radius: 50%;
@@ -381,7 +396,7 @@ footer .social-link{
     justify-content: center;
     margin-right: 20px;
     cursor: pointer;
-    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1900 - 300)));
+    font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1900 - 300)));
 }
 footer .social-link:hover{
     transition: background-color .5s ease;
@@ -391,7 +406,7 @@ footer .social-link:hover{
 footer .certficate{
     width: calc(1em + 4.2vw);   
     margin-top: 15px;
-    margin-left: 2em;
+    /* margin-left: 2em; */
 }
 footer .copy{
     /* float: left; */
@@ -410,15 +425,26 @@ footer .copy{
         max-width:100%;
         font-size:.7em;
     }
-    footer .social-link{
-        min-width: 25px;
-        width:30px;
-        height:30px;
+    footer .social-link{/* edit this */
+        /* min-width: 25px; */
+        /* width:30px; */
+        /* height:30px; */
+        
     }
     footer ul,
     footer .connect{
         min-width: 100%!important;
-        max-width: 100%!important;
+    }
+    footer .connect ul{
+        min-width: none;
+        max-width: auto;
+        justify-content: flex-start;
+    }
+    footer .connect ul li{
+        margin: 0 1em;
+    }
+    footer .social-links{
+        width: auto;
     }
     footer ul p{
         margin-top: 15px;
